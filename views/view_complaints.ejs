@@ -1,0 +1,33 @@
+<%- include("partials/header") -%>
+
+Aagye complaint dekhne?
+
+<table border="1">
+    <tr>
+        <th>S.N</th>
+        <th>Complaint</th>
+        <th>Email ID</th>
+        
+        
+    </tr>
+    
+    <%
+    if(complaintData.length!=0){
+    var i=1;
+    complaintData.forEach(function(data){
+    %>
+    <tr>
+        <td><%=data.id %></td>
+        <td><%=data.cmnt %></td>
+        <td><%=data.email %></td>
+        <td><a href="">Delete</a></td>
+    </tr>
+    <%  i++; }) %>
+    <% } else{ %>
+        <tr>
+            <td colspan="7">No Data Found</td>
+        </tr>
+    <% } %>
+</table>
+<%- include("partials/footer") -%>
+

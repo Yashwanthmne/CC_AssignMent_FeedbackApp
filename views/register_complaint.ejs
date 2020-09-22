@@ -1,0 +1,20 @@
+<%- include("partials/header") -%>
+
+Aagye complaint dene?
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Register Feedback</div>
+    <form class="ui form" action="/register" method="POST">
+        <div class="field">
+            <label>Feedback</label>
+            <input type="text" name="feedback" placeholder="feedback" required>
+        </div>
+        <div class="field">
+            <label>Email</label>
+            <input type="text" name="email" placeholder="Email">
+        </div>
+        <button class="ui violet basic button">Submit</button>
+    </form>
+</div>
+<%- include("partials/footer") -%>
+

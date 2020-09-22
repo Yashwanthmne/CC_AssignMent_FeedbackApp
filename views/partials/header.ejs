@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customer Care Service</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="ui fixed inverted menu">
+            <div class="ui container">
+                <div class="header item">Customer Care Service</div>
+                <a class="item" href="/">Home</a>
+                <a class="item" href="#">About</a>
+                <div class="right menu">
+                   <% if(!currentUser){ %>
+                        <a class="item" href="/login">Login</a>
+                        <a class="item" href="/signup">SignUp</a>
+                   <% } else{ %>
+                    <a class="item" href="/login"><%=currentUser%></a>
+                    <a class="item" href="/logout">Logout</a>
+                   <% } %>
+                </div>
+            </div>
+        </div>
+        <div id="mainMargin">
+            
+ 
